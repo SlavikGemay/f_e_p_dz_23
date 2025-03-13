@@ -10,12 +10,32 @@ document.querySelector('ul').addEventListener("click", (event) => {
    }
 });
 
-document.querySelector('div').addEventListener('click', (event) => {
-    if (event.target.nodeName === "BUTTON") {
+// document.querySelector('div').addEventListener('click', (event) => {
+//     if (event.target.nodeName === "BUTTON") {
+//         const li = document.createElement("li");
+//         const button = document.createElement('button');
+//
+//         const addTask = document.querySelector('input');
+//         const valueOfTask = addTask.value;
+//
+//         button.textContent = 'Видалити';
+//         li.append(button);
+//         li.prepend(valueOfTask);
+//
+//         document.querySelector("ul").append(li);
+//     }
+// });
+
+document.querySelector('div button').onclick = () => {
+
+    const addTask = document.querySelector('input');
+    addTask.value;
+
+    if (addTask.value?.trim()) {
         const li = document.createElement("li");
         const button = document.createElement('button');
 
-        const addTask = document.querySelector('input');
+        // const addTask = document.querySelector('input');
         const valueOfTask = addTask.value;
 
         button.textContent = 'Видалити';
@@ -24,4 +44,4 @@ document.querySelector('div').addEventListener('click', (event) => {
 
         document.querySelector("ul").append(li);
     }
-});
+};
